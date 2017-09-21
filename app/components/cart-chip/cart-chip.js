@@ -1,9 +1,10 @@
-angular.module('ecommerce').component('cartChip', {
-  template:'{{cp.getTotal()}}',
-  controllerAs:'cp',
-  controller:function(cartSrvc){
-    this.getTotal = function(){
-      return cartSrvc.getCart().length;
+angular.module('ecommerce').component('cartChip',{
+    templateUrl:'app/components/cart-chip/cart-chip.html',
+    controllerAs:'cp',
+    controller:function(cartSrvc){
+        this.getLength = function(){
+            return cartSrvc.getNumberItems();
+
+        }
     }
-  }
 })

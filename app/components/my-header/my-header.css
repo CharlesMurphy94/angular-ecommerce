@@ -1,7 +1,8 @@
 my-header {
-  display:block;
+  display: flex;
+  align-content: flex-end;
+  width: 100%
 }
-
 my-header nav{
   display: flex;
   align-content: flex-end;
@@ -9,7 +10,7 @@ my-header nav{
 }
 
 my-header a{
-  flex:1;
+  flex: 1;
 
   display: inline-block;
   margin-left: 40px;

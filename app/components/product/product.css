@@ -1,8 +1,9 @@
 product {
-  display:block;
+  display: flex;
+  min-height: 200px;
 }
 product .picture{
-  background-color:#eee;
+  /* background-color:#eee; */
   display:inline-block;
   width:300px;
   background-size: contain;

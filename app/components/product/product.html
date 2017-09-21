@@ -1,13 +1,13 @@
-<div style="display:flex">
 <div class="picture" ng-style="{backgroundImage:'url(' + pd.product.imageUrl + ')'}"></div>
-  <div class="padded">
-    <h1>{{pd.product.name}}</h1>
-    {{pd.product.price | currency}}
-    <button ng-if="pd.addToCart" ng-click="pd.add()"> Add To Cart</button>
-    <br>
-    <span ng-click="moreDetail=!moreDetail">{{moreDetail?"See Less":"See More"}}</span>
-    <div ng-show="moreDetail">
-      {{pd.product.description}}
-    </div>
+<div class="padding">
+  <h1>{{pd.product.name}}</h1>
+  {{pd.product.price | currency}} 
+  <button ng-show="pd.canAddProduct" ng-click="pd.addItem()">Add to Cart</button>
+  <span ng-click="showDetails = !showDetails"> {{showDetails ? "Show Less" : "Show More"}} </span>
+  <div class="padding" ng-show="showDetails">
+    {{pd.product.description}}
   </div>
 </div>
+
+
+
